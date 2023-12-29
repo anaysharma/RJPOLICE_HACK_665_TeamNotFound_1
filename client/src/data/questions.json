@@ -1,0 +1,63 @@
+{
+  "questions": [
+    {
+      "question": "How comfortable and heard did you feel during your interaction with the officers?",
+      "options": [
+        "Very comfortable and heard",
+        "Somewhat comfortable and heard",
+        "Neutral",
+        "Somewhat uncomfortable and unheard"
+      ]
+    },
+    {
+      "question": "How long did you wait to be seen by an officer after arriving at the station?",
+      "options": [
+        "Immediately or within 5 minutes",
+        "Between 5-15 minutes",
+        "Between 15-30 minutes",
+        "Between 30 minutes - 1 hour"
+      ]
+    },
+    {
+      "question": "How would you rate the officer's professionalism and respect during your interaction?",
+      "options": [
+        "Excellent: 😄",
+        "Good: 🙂",
+        "Neutral: 😐",
+        "Fair: 😑",
+        "Poor: 😞"
+      ]
+    },
+    {
+      "question": "How clearly and effectively did the officer explain the procedure for reporting your issue?",
+      "options": [
+        "Very clearly",
+        "Somewhat clearly",
+        "A little unclear",
+        "Very unclear"
+      ]
+    },
+    {
+      "question": "If applicable, were you kept informed about any updates or progress related to your issue?",
+      "options": [
+        "Regularly informed",
+        "Occasionally informed",
+        "Rarely informed",
+        "Never informed"
+      ]
+    },
+    {
+      "question": "During your interaction, did you feel you had enough opportunity to voice your concerns?",
+      "options": ["Yes", "No", "Neutral"]
+    },
+    {
+      "question": "Overall, how satisfied were you with the experience you had at the police station today?",
+      "options": [
+        "Very satisfied",
+        "Somewhat satisfied",
+        "Neutral",
+        "Dissatisfied"
+      ]
+    }
+  ]
+}
