@@ -1,6 +1,6 @@
+import { motion } from "framer-motion";
 import CreatePostForm from "../components/CreatePostForm";
 import Header from "../components/Header";
-import { motion } from "framer-motion";
 
 export default function Home(): JSX.Element {
   return (

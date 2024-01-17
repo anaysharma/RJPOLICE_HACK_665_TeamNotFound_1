@@ -18,7 +18,7 @@ export default function CreatePostForm() {
         Create a new Feedback Post
       </h3>
       <div className="flex flex-wrap gap-2 text-sm max-sm:flex-col">
-        <div className="flex-1 justify-between rounded-md border bg-slate-100 p-2 md:basis-64">
+        <div className="flex-1 justify-between rounded-md border bg-slate-100 p-2 sm:basis-64">
           <label className="flex flex-col justify-between gap-3" htmlFor="lang">
             1. Select Language
             <select
@@ -34,7 +34,7 @@ export default function CreatePostForm() {
             </select>
           </label>
         </div>
-        <div className="flex-1 justify-between rounded-md border bg-slate-100 p-2 md:basis-64">
+        <div className="flex-1 justify-between rounded-md border bg-slate-100 p-2 sm:basis-64">
           <label
             className="flex flex-col justify-between gap-3"
             htmlFor="number"
@@ -51,7 +51,7 @@ export default function CreatePostForm() {
             />
           </label>
         </div>
-        <div className="flex-1 justify-between rounded-md border bg-slate-100 p-2 md:basis-64">
+        <div className="flex-1 justify-between rounded-md border bg-slate-100 p-2 sm:basis-64">
           <div className="flex flex-col justify-between gap-3">
             3. Select Mode
             <div className="flex gap-2">
@@ -87,12 +87,11 @@ export default function CreatePostForm() {
             </div>
           </div>
         </div>
-        <div className="flex-1 justify-between rounded-md border bg-slate-100 p-2 md:basis-64">
-          <label className="flex flex-col justify-between gap-3" htmlFor="lang">
-            4. Next
+        <div className="flex flex-1 items-center rounded-md border bg-slate-100 p-2 sm:basis-64">
+          <label className="flex flex-1 items-center" htmlFor="lang">
             <Link
               to={link}
-              className="rounded bg-sky-600 px-3 py-2 text-center font-medium text-white hover:bg-sky-500"
+              className="h-full flex-1 basis-full rounded bg-sky-600 px-3 py-2 text-center font-medium text-white hover:bg-sky-500"
             >
               Go
             </Link>

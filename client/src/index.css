@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.chat-btn {
+  box-shadow:
+    0 5px 10px -2px #0008,
+    inset 0 3px 5px -2px #fff8,
+    inset 0 -3px 5px -2px #0004;
+
+  outline: 0px solid #46beff;
+
+  animation: ripple 1s ease-out infinite;
+}
+
+@keyframes ripple {
+  to {
+    outline-width: 15px;
+    outline-color: #0369a100;
+  }
+}

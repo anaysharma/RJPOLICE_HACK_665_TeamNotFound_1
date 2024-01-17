@@ -1,0 +1,6 @@
+{
+  "state": "StateUser",
+  "district": "DistrictUser",
+  "station": "PoliceStationUser",
+  "normal": "FeedbackSubmitter"
+}

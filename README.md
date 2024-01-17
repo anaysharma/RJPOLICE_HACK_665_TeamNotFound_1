@@ -211,6 +211,7 @@ Setting realistic deadlines for each component is crucial for completing the pro
 2. <u>Day 31 (January 10): Project Completion</u>
    - Wrap up any remaining tasks.
    - Deploy the finalized project.
+   - And start working on the Research Work
 
 Ensure that each task is broken down into manageable sub-tasks, and regularly review progress to identify and address any challenges. It's also advisable to allocate buffer time for unexpected issues that may arise during the development process. Communication within your development team is key to meeting deadlines effectively.
 <br>

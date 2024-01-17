@@ -163,7 +163,7 @@ export default function Footer() {
             </a>
           </div>
           <a href="#" className="text-white">
-            Copyright © 2023 Rajasthan Police, All rights reserved.{" "}
+            Copyright © 2024 Rajasthan Police, All rights reserved.{" "}
           </a>
         </div>
       </div>
