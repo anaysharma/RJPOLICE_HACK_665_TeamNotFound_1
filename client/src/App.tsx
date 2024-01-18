@@ -17,6 +17,8 @@ import Signup from "./pages/Signup";
 import SignupSuccess from "./pages/SignupSuccess";
 import StateHome from "./pages/StateHome";
 import StationHome from "./pages/StationHome";
+import StationSummary from "./pages/StationSummary";
+import Summary from "./pages/Summary";
 import getUserRole from "./utils/getUserRole";
 
 function App() {
@@ -63,6 +65,8 @@ function App() {
             <React.Fragment>
               <Route index element={<DistrictHome />} />
               <Route path="complain" element={<Complaints />} />
+              <Route path="summary" element={<Summary />} />
+              <Route path="summary/station" element={<StationSummary />} />
             </React.Fragment>
           )}
 

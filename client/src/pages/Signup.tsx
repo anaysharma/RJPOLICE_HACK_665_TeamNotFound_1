@@ -74,6 +74,7 @@ export default function Signup(): JSX.Element {
         <h1 className="z-10 flex flex-col items-center gap-6 py-6 text-2xl font-bold drop-shadow-lg max-sm:flex-1">
           Police Feedback System
         </h1>
+
         <form
           onSubmit={handleSubmit}
           className="z-10 mx-4 grid w-full gap-3 rounded-lg border bg-white p-4 shadow-md sm:w-[500px]"

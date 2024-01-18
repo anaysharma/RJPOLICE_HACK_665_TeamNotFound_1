@@ -50,7 +50,7 @@ exports.feedback = async (req, res) => {
       User: updatedUser,
       policeStation: updatedStation,
       success: true,
-      // data: savedFeed,
+      data: savedFeed,
       message: "Entry Created Successfully",
     });
   } catch (err) {

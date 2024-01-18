@@ -19,7 +19,7 @@ const stationSchema = new mongoose.Schema(
     complains: [
       {
           type: mongoose.Schema.Types.ObjectId,
-          ref:"Complains",
+          ref:"Complain",
       }
     ],
   }

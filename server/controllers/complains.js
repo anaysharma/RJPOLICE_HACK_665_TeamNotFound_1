@@ -9,18 +9,18 @@ const Complain = require("../model/complains");
 exports.complain = async (req, res) => {
     try {
         // extract title & description from request body
-        const {user, station, problem} = req.body;
+        const {users, stations, problem} = req.body;
         // create a new feedback obj 
-        const complain = new Complain({ user, station, problem });
+        const complain = new Complain({ users, stations, problem });
         // and insert into db
         const savedComplain = await complain.save();
         //find the user by id and add the new feedback to its feedbacks array
         
-        const updatedUser = await User.findByIdAndUpdate(user, { $push: { complains: savedComplain._id } }, { new: true })
+        const updatedUser = await User.findByIdAndUpdate(users, { $push: { complains: savedComplain._id } }, { new: true })
             .populate("complains")
             .exec();
         
-        const updatedStation = await policeStation.findByIdAndUpdate(station, { $push: { complains: savedComplain._id } }, { new: true })
+        const updatedStation = await policeStation.findByIdAndUpdate(stations, { $push: { complains: savedComplain._id } }, { new: true })
             .populate("complains")
             .exec();
         
@@ -35,8 +35,8 @@ exports.complain = async (req, res) => {
     }
     catch (err) {
         console.log("issue aa gya");
-        console.log("submission nhi ho paaya",err);
-        console.error(error.message);
+        console.log("Complain submission nhi ho paaya",err);
+        console.error(err.message);
         res.status(500)
         .json({
                 success: false,

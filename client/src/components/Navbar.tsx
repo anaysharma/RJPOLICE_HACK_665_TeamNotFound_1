@@ -72,7 +72,7 @@ export default function Navbar(): JSX.Element {
           {role === userRoles["district"] && (
             <>
               <li>
-                <Link to="/feedbacks">Feedbacks</Link>
+                <Link to="/summary">Summary</Link>
               </li>
               <li>
                 <Link to="/complain">Complaints</Link>

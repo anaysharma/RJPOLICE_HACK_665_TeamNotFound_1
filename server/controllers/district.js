@@ -3,6 +3,7 @@
 const User = require("../model/users");
 const District = require("../model/district");
 const Complain = require("../model/complains");
+const policeStation = require("../model/policeStation");
 
 //define route handler
 
@@ -41,7 +42,7 @@ exports.register = async (req, res) => {
 
 exports.getAllDistricts = async (req, res) => {
     try {
-        const allDistricts = await District.find({});
+        const allDistricts = await District.find({}).populate("stations").exec();
         //response
         res.status(200)
         .json({
@@ -57,4 +58,37 @@ exports.getAllDistricts = async (req, res) => {
 };
   
 // ======================================================================================================================== //
-// get all feedbacks for district
+// get all stations for district
+
+exports.getAllStationsFromDistrict = async (req, res) => {
+    try {
+      const districtId = req.params.id;
+  
+      // Find the district by ID
+      const district = await District.findById(districtId);
+  
+      if (!district) {
+        return res.status(404).json({ error: 'District not found' });
+      }
+  
+      // Get all stations in the district
+        const stations = await policeStation.find({ _id: { $in: district.stations } });
+        res.status(200).json({
+            success: true,
+            data: stations,
+            message:"all Stations successfully fetched",
+        })
+    }
+
+    catch (err) {
+        console.log("issue aa gya");
+        console.log("Stations fetch nhi ho paaya",err);
+        console.error(err.message);
+        res.status(500)
+        .json({
+                success: false,
+                data: "internal server error",
+                message:err.message,
+        })
+    }
+}

@@ -60,4 +60,46 @@ exports.getAllStations = async (req, res) => {
       console.log(error);
       return res.status(500).json("Cannot find any Station");
     }
+};
+  
+
+// ====================================================================================================================//
+// to get average the stations object
+
+
+exports.getAverageRating = async (req, res) => {
+    try {
+      const stationId = req.params.id;
+      const station = await policeStation.findById(stationId);
+  
+      if (!station) {
+        return res.status(404).json({ error: 'Station not found' });
+        }
+        const averageFeedback = {};
+        
+        const stationFeedback = await feedback.find({ stations: stationId });
+  
+        // Calculate the average for each question
+        const totalFeedback = stationFeedback.length;
+        const sumFeedback = (question) =>
+          stationFeedback.reduce((sum, feedback) => sum + feedback[question], 0);
+  
+        averageFeedback[station.name] = {
+          q1: totalFeedback > 0 ? sumFeedback('q1') / totalFeedback : 0,
+          q2: totalFeedback > 0 ? sumFeedback('q2') / totalFeedback : 0,
+          q3: totalFeedback > 0 ? sumFeedback('q3') / totalFeedback : 0,
+          q4: totalFeedback > 0 ? sumFeedback('q4') / totalFeedback : 0,
+          q5: totalFeedback > 0 ? sumFeedback('q5') / totalFeedback : 0,
+          q6: totalFeedback > 0 ? sumFeedback('q6') / totalFeedback : 0,
+          q7: totalFeedback > 0 ? sumFeedback('q7') / totalFeedback : 0,
+        };
+          
+      // Send the average feedback as a response
+      res.json(averageFeedback);
+
+      }
+    catch (error) {
+      console.error(error);
+      res.status(500).json({ error: 'Internal Server Error' });
+    }
   };

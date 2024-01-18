@@ -17,7 +17,7 @@ function DistrictHome() {
             View Complains
           </Link>
           <Link
-            to="/feedbacks"
+            to="/summary"
             className="flex-1 rounded-md bg-sky-600 px-4 py-2 text-center font-medium text-white hover:bg-sky-500"
           >
             View District Summary
