@@ -23,17 +23,19 @@ export default function Post({
   return (
     <div className="overflow-hidden rounded-md border bg-white shadow-md">
       <div className="grid border-b bg-slate-50 px-3 py-2">
-        <span className="text-lg font-medium">{title}</span>
         <span>
           {userIcon && <img src={userIcon} />}
-          <span>{userName}</span>
+          <span className="text-sm text-slate-600">{userName}</span>
         </span>
+        <span className="text-lg font-bold">{title}</span>
       </div>
       <Link
         to={`/post/${id}`}
         className="m-3 grid overflow-hidden rounded border"
       >
-        {image && <img src={image} className="h-52 w-full object-cover" />}
+        {image && (
+          <img src={image} className="w-full object-cover object-top" />
+        )}
         <p className="p-2">{content}</p>
       </Link>
       <div className="flex justify-between p-3 pt-0">
